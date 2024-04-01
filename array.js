@@ -4,47 +4,37 @@ function reverseArray(arr){
     
   
 }
-//question2
+
 console.log(reverseArray(["apple","mango","banana","orange"]));
-descending
- function sortedElement(arr){
-arr=arr.split().reverse().join('');
-    return arr
- }
- const modifiedString=sortedElement(myString,1);
- console.log(modifiedString)
-//question3
+
+
+//question2
  function checkArray(arr1){
-    let arr2=arr1.array.forEach(element => {
-        if (element>0){
-        console.log('positive')
+    for(let i=0;i<arr1.length;i++){
+        if(arr1[i]>0){
+            return "positive";
+        }else if(arr1[i]<0){
+            return "negative"
         }
-        else if(element<0){
-            console.log("negative")
-        }
-        else 
-        console.log("Zero")
-
-        
-
-    });
+    }
+    return0;
  }
+ const number=[1,2,3,4];
+ console.log(checkArray(number));
  //question3
 
  function sortEmployeeSalary(employee){
  
-
-
-
-return employee.sort((a,b)=>a.salary -b.salary);
-
-    
+employee.sort((a,b)=>a.salary -b.salary);
+return employee
+   
  }
  const employeeList=[
-    {id:1,name:'Daisy',salary:6000},{id:2,name:'Lorna',salary:5000},{id:3,name:'Alpha',salary:4000}
+{id:1,name:'Daisy',salary:6000},{id:2,name:'Lorna',salary:5000},{id:3,name:'Alpha',salary:4000}
 ];
 const sortEmployee=sortEmployeeSalary(employee);
 console.log(sortEmployee);
+
 //question 4
 function multipleByTwo(number){
     number.forEach((number)=>{
