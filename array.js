@@ -1,14 +1,17 @@
 function reverseArray(arr){
-    let myString= arr
-    console.log(arr.sort());
-    
-  
+    const sortedArr=[...arr];
+    indices.forEach(idx =>{
+        if(idx<sortedArr.length)
+        sortedArr[idx]=sortedArr[idx].split('').reverse().join('')
+    })
+  sortedArr.sort()
+  return sortedArr
 }
 
 console.log(reverseArray(["apple","mango","banana","orange"]));
 
 
-//question2
+//question2Using JS functions and an array of numbers, return positive if an element within the array is positive, negative if an element is negative, else zero
  function checkArray(arr1){
     for(let i=0;i<arr1.length;i++){
         if(arr1[i]>0){
@@ -21,7 +24,7 @@ console.log(reverseArray(["apple","mango","banana","orange"]));
  }
  const number=[1,2,3,4];
  console.log(checkArray(number));
- //question3
+ //question3Given an array of objects, where each object represents an employee with an id, name, and salary property, write a function that returns a new array of employee objects sorted by their salary in ascending order.
 
  function sortEmployeeSalary(employee){
  
@@ -35,7 +38,7 @@ return employee
 const sortEmployee=sortEmployeeSalary(employee);
 console.log(sortEmployee);
 
-//question 4
+//question 4Write a function that accepts an array of numbers and uses the forEach() method to console.log each number multiplied by 2.
 function multipleByTwo(number){
     number.forEach((number)=>{
         console.log(number*2);
@@ -44,7 +47,7 @@ function multipleByTwo(number){
     const numbersArray=[1,2,3,4];
     multipleByTwo(numbersArray);
 }
-//question5
+//question5Write a function that takes in an array of numbers and consoles the first four items multiplied by 8 and the last two added by 5. Console the array with the new values
 function transformArray(numbers){
     for(let i =0;i<4;i++){
         numbers[i]*8;
@@ -57,6 +60,8 @@ console.log(numbers);
 }
 const numbersArray=[1,2,3,4,5,6];
 transformArray(numbersArray);
+
+
 
 
 
